@@ -1,0 +1,209 @@
+img {
+  width: 120px;
+  height: 80px;
+}
+header.flex {
+  justify-content: space-between;
+  padding: 0 2.4rem;
+  margin-top: 0;
+}
+
+header ul {
+  gap: 16px;
+}
+header ul li a {
+  color: var(--title);
+  opacity: 0.9;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+header ul li a:hover {
+  color: var(--Hovernav);
+  opacity: 1;
+  font-size: 0.93rem;
+  font-weight: 500;
+}
+header ul li {
+  margin-right: 20px;
+}
+header.flex nav {
+  background-color: var(--bgHeader);
+  padding: 0.77rem 1.6rem;
+  border-radius: 55px;
+  box-shadow: 1px 1px 10px rgba(255, 174, 0, 0.418);
+}
+.logo {
+  margin-right: 200px;
+}
+
+header button.menu {
+    display: none;
+  }
+
+header .icon-close{
+    font-size: 1.5rem;
+    color: var(--subtitle);
+    transition: 0.3s ;
+}
+header .icon-close:hover{
+    font-size: 1.7rem;
+    color:var(--Hovernav);
+    rotate: 180deg;
+}
+
+header .icon-menu,
+header button.mode {
+  background-color: var(--bgHeader);
+  height: 2.4rem;
+  width: 2.4rem;
+  border-radius: 50%;
+  justify-content: center;
+  text-align: center;
+  color: var(--subtitle);
+  border: 1px solid rgba(244, 165, 96, 0.249);
+}
+header .icon-menu:hover,
+header button.mode:hover {
+  color: var(--title);
+  border: 1px solid rgb(244, 165, 96);
+  transition: 0.2s;
+}
+header .icon-close{
+    font-size: 1.5rem;
+    color: var(--subtitle);
+    transition: 0.3s ;
+}
+header .icon-close:hover{
+    font-size: 1.7rem;
+    color:var(--Hovernav);
+    rotate: 180deg;
+}
+
+header .fixed {
+  position: fixed;
+  inset: 0;
+  z-index: 11;
+  background-color: rgba(40, 40, 48, 0.91);
+}
+.btn {
+    font-size: 18px;
+    padding: 9px 25px;
+    margin: 1rem;
+    margin-right:-130px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+  }
+  
+  .btn:hover {
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: rgb(var(--primary-color));
+    border: 1px solid rgb(var(--primary-color));
+    color: rgb(var(--text-color));
+  }
+  
+ 
+  .btn-semi-transparent {
+    background-color: rgba(var(--primary-color), 0.15);
+    border: 1px solid rgba(var(--primary-color), 0.25);
+    color: rgba(var(--text-color), 0.8);
+  }
+  
+  .btn-semi-transparent:hover {
+    background-color: rgba(var(--primary-color), 0.35);
+    border: 1px solid rgba(var(--primary-color), 0.5);
+    color: rgba(var(--text-color), 0.9);
+  }
+  
+  .btn-glow:hover {
+    box-shadow: rgba(var(--primary-color), 0.5) 0px 0px 20px 0px;
+  }
+  
+ 
+  .btn-gradient {
+    background-image: linear-gradient(to right, rgba(255, 166, 0, 0.567),var(--Hovernav));
+    border: 0;
+    color: rgba(var(--text-color));
+  }
+  
+
+  .btn-gradient-border {
+    color: rgba(var(--text-color));
+    border: 2px double transparent;
+        background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)), radial-gradient(circle at left top, rgb(1, 110, 218), rgb(217, 0, 192));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+@keyframes mymove {
+    0% {
+      scale: 0;
+    }
+    60% {
+      scale: 1.2;
+    }
+    100% {
+      scale: 1;
+    }
+  }
+header .fixed ul.modal{
+   animation: mymove 0.77s 1;
+   scale: 1;
+   width: 85%;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 2rem;
+   border-radius: 2rem;
+   padding: 1rem 2rem ;
+   background-color: var(--secondary);
+}
+header .fixed ul.modal li{
+  border-bottom: 1px solid var(--Hovernav);
+  padding-bottom: 0.80rem;
+  padding-top: 0.55rem;
+}
+header .fixed ul.modal li:last-child{
+   border:none;
+}
+header .fixed ul.modal li:first-child{
+  text-align: right;
+  border: none;
+  padding-bottom: 0;
+  padding-top: 0.2rem;
+  margin-bottom: -1rem;
+}
+header .fixed ul.modal li a{
+    font-size: 1rem;
+    color: var(--title);
+    opacity: 0.9;
+    font-weight: 500;
+
+}
+header .fixed ul.modal li a:hover{
+    color: var(--Hovernav);
+    opacity: 1;
+    font-size: 0.93rem;
+    font-weight: 500;
+}
+
+@media (max-width: 800px) {
+    header.flex nav {
+      display: none;
+    }
+    header button.menu {
+      display: block;
+      margin-top: 1rem;
+    }
+    .logo{
+        display: none;
+    }
+    .btn {
+      display: none;
+    }
+    .mode {
+      margin-top: 1rem;
+    }
+  }

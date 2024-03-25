@@ -1,0 +1,157 @@
+main.flex {
+    gap: 1rem;
+    align-items: start;
+    margin-top: 2rem;
+    margin-left: 1rem;
+  }
+  
+  /*==============================================
+   1.left section ===> Buttons
+  ================================================*/
+  main section.left-section.flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+  main section.left-section.flex button {
+    background-color: rgba(36, 37, 46, 1);
+    width: 13rem;
+    padding: 0.75rem 0;
+    border: 1px solid var(--Hovernav);
+    text-align: center;
+    font-size: 1.05rem;
+    text-transform: capitalize;
+    opacity: 0.5;
+    border-radius: 15px;
+    transition: 0.3s;
+  }
+  main section.left-section.flex button:hover {
+    opacity: 1;
+  }
+  
+  main section.left-section.flex button.active {
+    opacity: 1;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    padding: 0.8rem 0;
+    border: 1px solid var(--blue);
+  }
+  
+  /*==============================================
+   1.Roght section ===> Card
+  ================================================*/
+  
+  main section.right-section.flex{
+      justify-content: center;
+      flex-wrap: wrap;
+      column-gap: 16px;
+      row-gap: 2rem;
+      
+  }
+  .card {
+    border: 1px solid var(--Hovernav);
+    border-radius: 20px;
+    transition: 0.3s;
+    background-image: linear-gradient(
+      rgba(255, 255, 255, 0.05),
+       rgba(255, 255, 255, 0.05));
+  }
+  .card:hover {
+    border: 1px solid var(--blue);
+    rotate: 1deg;
+    scale: 1.01;
+    cursor: pointer;
+  }
+  .card img {
+    border-radius: 5px;
+    width: 20rem;
+    height: 12rem;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .card .box {
+    padding: 1rem 0.4rem;
+  }
+  .card .box .title {
+    color: var(--title);
+  }
+  .card .box .sub-title {
+    color: var(--subtitle);
+    font-size: 0.8rem;
+    margin-top: 0.7rem;
+    margin-bottom: 1.1rem;
+  }
+ 
+  .bttn {
+    
+    font-size: 12px;
+    padding: 10px 20px;
+    margin: 1rem;
+    margin-left:100px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+  }
+  
+  .bttn:hover {
+    transition: all 0.3s ease;
+  }
+  
+  .bttn-primary {
+    background-color: rgb(var(--primary-color));
+    border: 1px solid rgb(var(--primary-color));
+    color: rgb(var(--text-color));
+  }
+  
+ 
+  .bttn-semi-transparent {
+    background-color: rgba(var(--primary-color), 0.15);
+    border: 1px solid rgba(var(--primary-color), 0.25);
+    color: rgba(var(--text-color), 0.8);
+  }
+  
+  .bttn-semi-transparent:hover {
+    background-color: rgba(var(--primary-color), 0.35);
+    border: 1px solid rgba(var(--primary-color), 0.5);
+    color: rgba(var(--text-color), 0.9);
+  }
+  
+  .bttn-gloww:hover {
+    box-shadow: rgba(var(--primary-color), 0.5) 0px 0px 20px 0px;
+  }
+  
+ 
+  .bttn-gradientt {
+    background-image: linear-gradient(to right, rgba(255, 166, 0, 0.567),var(--Hovernav));
+    border: 0;
+    color: rgba(var(--text-color));
+  }
+  
+
+  .bttn-gradient-border {
+    color: rgba(var(--text-color));
+    border: 2px double transparent;
+    background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)), radial-gradient(circle at left top, rgb(1, 110, 218), rgb(217, 0, 192));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+  @media (max-width: 600px) {
+     main.flex{
+      flex-direction: column;
+      gap: 2.64rem;
+      align-items: center;
+     }
+     main section.left-section.flex {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    main section.left-section.flex button {
+     
+      width: 7rem;
+      padding: 0.8rem 0;
+      
+      font-size: 0.9rem;
+     
+    }
+    }
